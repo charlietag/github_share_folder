@@ -1,0 +1,41 @@
+# /etc/sysconfig/network-scripts/ifcfg-xxx
+# #######################################
+#  #### CentOS7 Static IP General Config #####
+# #######################################
+
+# ----------------------------------
+#  Unique Info
+# ----------------------------------
+NAME="enp0s25"
+UUID="2c2655e6-b467-4e3d-9e07-2ec9a6c6a437"
+DEVICE="enp0s25"
+
+# ----------------------------------
+#  Almost the same
+# ----------------------------------
+# --- General ---
+ONBOOT="yes"
+TYPE="Ethernet"
+BOOTPROTO="none"
+
+# --- IPv4 ---
+DEFROUTE="yes"
+PEERDNS="no"
+PEERROUTES="no"
+IPV4_FAILURE_FATAL="no"
+
+# --- IPv6 ---
+IPV6INIT="no"
+IPV6_AUTOCONF="no"
+IPV6_DEFROUTE="no"
+IPV6_PEERDNS="no"
+IPV6_PEERROUTES="no"
+IPV6_FAILURE_FATAL="no"
+
+# IP here
+IPADDR="192.168.1.42"
+NETMASK="255.255.255.0"
+GATEWAY="192.168.1.254"
+
+# DNS
+# /etc/resolv.conf

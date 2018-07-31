@@ -1,0 +1,26 @@
+# /etc/network/interfaces
+# ===============================================
+# This is ONLY a sample file!
+# To replace dhcp setting
+# Please reference the following config.
+# setup into the file "/etc/init.d/interfaces"
+# ===============================================
+
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+#auto ${eth_name}
+#iface ${eth_name} inet dhcp
+
+# The primary network interface
+auto ${eth_name}
+iface ${eth_name} inet static
+address ${eth_address}
+netmask ${eth_netmask}
+gateway ${eth_gateway}
+dns-nameservers ${eth_dns}
