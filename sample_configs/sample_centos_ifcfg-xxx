@@ -1,41 +1,52 @@
+# Ref. command "nmtui"
+
 # /etc/sysconfig/network-scripts/ifcfg-xxx
 # #######################################
-#  #### CentOS7 Static IP General Config #####
+#  #### CentOS8 Static IP General Config #####
 # #######################################
 
-# ----------------------------------
-#  Unique Info
-# ----------------------------------
-NAME="enp0s25"
-UUID="2c2655e6-b467-4e3d-9e07-2ec9a6c6a437"
-DEVICE="enp0s25"
+#----------------
+# uniq info
+#----------------
+NAME=ens160
+UUID=59c556d0-e8e8-4e21-b54c-0e244ce3e7d8
+DEVICE=ens160
 
-# ----------------------------------
-#  Almost the same
-# ----------------------------------
-# --- General ---
-ONBOOT="yes"
-TYPE="Ethernet"
-BOOTPROTO="none"
+#----------------
+# same
+#----------------
+# General
+ONBOOT=yes
 
-# --- IPv4 ---
-DEFROUTE="yes"
-PEERDNS="no"
-PEERROUTES="no"
-IPV4_FAILURE_FATAL="no"
+NM_CONTROLLED=yes
+TYPE=Ethernet
+BOOTPROTO=none
 
-# --- IPv6 ---
-IPV6INIT="no"
-IPV6_AUTOCONF="no"
-IPV6_DEFROUTE="no"
-IPV6_PEERDNS="no"
-IPV6_PEERROUTES="no"
-IPV6_FAILURE_FATAL="no"
+PROXY_METHOD=none
+BROWSER_ONLY=no
 
-# IP here
-IPADDR="192.168.1.42"
-NETMASK="255.255.255.0"
-GATEWAY="192.168.1.254"
+
+# ipv4
+DEFROUTE=yes
+PEERDNS=no
+PEERROUTES=no
+IPV4_FAILURE_FATAL=yes
+
+# ipv6
+IPV6_DISABLED=yes
+IPV6INIT=no
+IPV6_DEFROUTE=no
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+IPV6_AUTOCONF=no
+IPV6_PEERDNS=no
+IPV6_PEERROUTES=no
+
+
+# IP
+IPADDR=192.168.1.73
+PREFIX=24
+GATEWAY=192.168.1.1
 
 # DNS
 # /etc/resolv.conf
